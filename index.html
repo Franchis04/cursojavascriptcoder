@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/js/main.js"></script>
-    <title>Primera Entrega</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <title>Segunda Entrega</title>
 </head>
-<body>
+<body class="bodyca">
+    <h1 class="titulo">Calculadora de Edad</h1>
+
+    <div class="fechas">
+        <strong><label for="birthYear">Año de Nacimiento:</label></strong>
+        <input type="number" id="birthYear" placeholder="Ej: 2004">
+    </div>
+
+    <div class="fechas">
+       <strong><label for="targetYear">Año en el que quieres saber la edad:</label></strong>
+        <input type="number" id="targetYear" placeholder="Ej: 2050">
+    </div>
+
+    <button class="boton" id="calculateBtn">Calcular Edad</button>
     
+    <p class="resultado" id="result"></p>
+
+    <script src="/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,37 @@
+.bodyca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    width: 100%;
+    flex-direction: column;
+    background-color: yellow;
+}
+
+.titulo {
+    color: blue;
+}
+
+.fechas {
+    color: black;
+    margin: 50px;
+}
+
+.boton {
+    color: white;
+    background-color: aqua;
+    margin-top: 5%;
+    width: 200px;
+    height: 100px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.boton:hover{
+    background-color: rgb(0, 136, 255);
+}
+
+.resultado {
+    margin-top: 100px;
+    font-size: 30px;
+}

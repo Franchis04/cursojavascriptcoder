@@ -1,18 +1,30 @@
-function calcularEdad(anioNacimiento, anioACalcular) {
-    let edad = 0;
-    let anioActual = anioNacimiento;
+const usuario = {
+    anioNacimiento: 0, 
 
-    while (anioActual < anioACalcular) {
-        edad++;
-        anioActual++;
-
+    calcularEdad: function(anio) {
+        return anio - this.anioNacimiento;
     }
+};
 
-    return edad;
+function mostrarResultado(mensaje) {
+    document.getElementById('result').textContent = mensaje;
 }
 
-let anioNacimiento = prompt("Ingrese su año de nacimiento: ");
-let anioACalcular = prompt("Ingrese el año en el cual quiera saber su edad: ");
+function calcularEdadUsuario() {
 
-let edadCalculada = calcularEdad(anioNacimiento, anioACalcular);
-console.log("La edad en el año " + anioACalcular + " será: " + edadCalculada + " años");
+    const anioNacimiento = parseInt(document.getElementById('birthYear').value);
+    const anioObjetivo = parseInt(document.getElementById('targetYear').value);
+
+    if (isNaN(anioNacimiento) || isNaN(anioObjetivo)) {
+        mostrarResultado('Por favor, ingresa números válidos.');
+        return;
+    }
+
+    usuario.anioNacimiento = anioNacimiento;
+
+    const edad = usuario.calcularEdad(anioObjetivo);
+
+    mostrarResultado(`En el año ${anioObjetivo}, tendrás ${edad} años.`);
+}
+
+document.getElementById('calculateBtn').addEventListener('click', calcularEdadUsuario);
